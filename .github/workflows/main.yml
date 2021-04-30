@@ -8,7 +8,7 @@ on:
 env:
   AZURE_WEB_NAME: vsmsimpletestapp
   AZURE_WEBAPP_PATH: '.'
-  DOTNET_VERSION: '5.0.102'
+  #DOTNET_VERSION: '5.0.102'
 
 jobs:
   build-and-deploy:
@@ -25,7 +25,7 @@ jobs:
       - name: SETUP .NET CORE
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: ${{ env.DOTNET_VERSION }}}
+          dotnet-version: 5.0.102
       
       - name: dotnet build + publish
         run: |
