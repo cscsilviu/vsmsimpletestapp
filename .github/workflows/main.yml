@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  AZURE_WEB_NAME: vsmsimpletestapp
+  AZURE_WEBAPP_NAME: vsmsimpletestapp
   AZURE_WEBAPP_PATH: '.'
   DOTNET_VERSION: 5.0.102
 
@@ -36,7 +36,7 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           
-          appname: ${{ env.AZURE_WEBAPP_NAME }}
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
           package: '${{ env.AZURE_WEBAPP_PATH }}/myapp'
 
 
